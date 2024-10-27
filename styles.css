@@ -1,0 +1,434 @@
+
+:root{
+    --prime: #EFFFFB;
+    --second: #272727;
+    --third: #ffffff;
+    --last: #272727;
+}
+
+img{
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+p, h1, h2, h3{
+    color: white;
+}
+
+body{
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--prime) ;
+}
+
+header{
+
+    background-color:var(--prime);
+    width: 100%;
+    height: 80px;
+}
+
+footer{
+    background-color:var(--last);
+    width: 100%;
+    height: 80px;
+}
+
+
+#hamburger {
+    /* Pour que la checkbox ne s'affiche pas */
+    display: none;
+}
+
+@media screen and (max-width:800px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        background: black;
+        overflow: hidden;
+        margin: -10px -10px 0 -10px;
+    
+        /* Pour que les liens soient "rangés" par défaut */
+    
+    }
+    
+    nav a {
+        color: rgb(255, 255, 255);
+        text-decoration: none;
+        padding: 20px 20px 20px 20px;
+        text-align: end;
+    }
+        
+        .menu {
+            /* Pour que le menu reste en place quand on scroll */
+            position: fixed;
+            /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+            width: 0px;
+        }
+        
+        
+        
+        #hamburger-logo {
+            /* Pour que le curseur soit un pointeur */
+            cursor: pointer;
+            background: var(--last);
+            height: 100px;
+            width: 190px;
+            font-size: 60px;
+            display: block;
+            color: white;
+            /* Pour que le menu hamburger s'affiche toujours */
+            text-align: right;
+            /* Pour que le menu hamburger soit "rangé" par défaut */
+            transform: translateX(-115px);
+            padding: 10px;
+        }
+        
+        nav {
+            display: flex;
+            flex-direction: column;
+            background: var(--last);
+            overflow: hidden;
+            font-size: larger;
+            width: 200px;
+            /* Pour que les liens soient "rangés" par défaut */
+            transform: translateX(-200px);
+        }
+        
+        #hamburger-logo,
+        nav {
+            /* Pour qu'il y ait une animation */
+            transition: 1.2s;
+        }
+        
+        /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+        #hamburger:checked ~ #hamburger-logo,
+        #hamburger:checked ~ nav {
+            /* Changement de la position pour afficher les menus */
+            transform: translate(0);
+        }
+    
+}
+
+@media screen and (min-width:800px) {
+
+    #hamburger-logo{
+        display: none;
+    }
+
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        text-align: end;
+    }
+
+
+    nav{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        background-color: var(--last);
+
+        height: 50px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    
+    
+    a{
+        color: white;
+        font-size: large;
+        text-decoration: none;
+    }
+
+    a:hover{
+        color: rgb(85, 85, 234);
+    }
+}
+    
+}
+    
+    
+
+.containerGlobal{
+    display: flex;
+    flex-flow: column nowrap;
+
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+
+    background-color: var(--third);
+    margin: 5%;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.titreSousTitre{
+    text-align: center;
+    
+        @media screen and (min-width:800px) {
+
+            h1 {
+                font-family: 'Untitled Serif';
+                font-size: 100px;
+                line-height: 98px;
+                font-weight: 400;
+    
+                background-color: var(--second);
+                margin-right: 25%;
+                margin-left: 25%;
+    
+                border-radius:10px;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
+                text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                     0px -5px 35px rgba(255,255,255,0.3);
+    
+            }
+        
+    
+            p{
+                color: black;
+                margin-top: -80px;
+                font-style: italic;
+                font-size: 28px;
+            }
+            
+        }
+
+        @media screen and (max-width:800px) {
+
+            h1 {
+                font-family: 'Untitled Serif';
+                font-size: 68px;
+                line-height: 98px;
+                font-weight: 400;
+    
+                background-color: var(--second);
+                margin-right: 15%;
+                margin-left: 15%;
+    
+                border-radius:10px;
+                box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    
+                text-shadow: 2px 8px 6px rgba(0,0,0,0.2),
+                     0px -5px 35px rgba(255,255,255,0.3);
+    
+            }
+        
+    
+            p{
+                color: black;
+                margin-top: -60px;
+                font-style: italic;
+                font-size: 28px;
+            }
+            
+        }
+    
+    
+        
+
+}
+
+.introTexte{
+
+    @media screen and (min-width:800px) {
+
+        display: flex;
+        flex-flow: row nowrap;
+        text-align: center;
+        margin: 25px;
+        font-size: larger;
+
+    
+
+        img {
+            width: 275px;
+            height: 275px;
+            border: none;
+            box-shadow: none;
+        }
+
+    }
+
+    @media screen and (max-width:800px) {
+
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        margin: 25px;
+        font-size: larger;
+
+    
+
+        img {
+            align-self: center;
+            margin-bottom: 20px;
+            width: 175px;
+            height: 175px;
+            border: none;
+            box-shadow: none;
+        }
+
+    }      
+
+
+
+        
+    }
+    
+
+.introTexteBis{
+
+
+    display: flex;
+    flex-flow: column nowrap;
+    box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
+    background-color: var(--second);
+    padding: 5%;
+    border-radius:10px;
+
+}
+
+
+@media screen and (min-width:800px) {
+
+    .vignettes{
+
+    
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        padding-left: 50px;
+        padding-right: 50px;
+        margin-top: 25px;
+        border-radius: 20px;
+    
+        a:hover{
+            transition: 600ms;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+        }
+    }
+    
+    .vignettesCase{
+    
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
+    
+        
+    
+    
+            img{
+                object-fit: cover;
+                margin-top: 25px;
+                width: 220px;
+                height: 220px;
+            }
+    
+    
+    
+    }
+    
+    .vignettesTexte{
+    
+        margin: 15px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        
+    
+    
+        background-color: var(--second);
+        padding: 5%;
+        border-radius: 10px;
+    }
+    
+}
+
+
+@media screen and (max-width:800px) {
+
+    .vignettes{
+
+    
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-between;
+
+        margin-top: 25px;
+        border-radius: 20px;
+    
+        a:hover{
+            transition: 600ms;
+            box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+        }
+    }
+    
+    .vignettesCase{
+    
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        justify-content: space-around;
+    
+        
+    
+    
+            img{
+                margin-top: 25px;
+                width: 75%;
+                height: 75%;
+            }
+    
+    
+    
+    }
+    
+    .vignettesTexte{
+    
+
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        margin-top: 25px;
+        
+    
+    
+        background-color: var(--second);
+        padding: 10px;
+        border-radius: 10px;
+    }
+    
+}
+
+
+.footerIndex{
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 20px;
+    text-align: center;
+
+    a{
+    color: white;
+
+        margin: 10px;
+        font-size: larger;
+        text-decoration: none;
+
+        @media screen and (max-width:800px) {
+        
+            font-size: 16px;
+        }
+    }
+
+    a:hover{
+        color: rgb(85, 85, 234);
+    }
+
+    
+}

@@ -1,0 +1,293 @@
+:root{
+    --primary: #032F60;
+    --secondary: #AADBF9;
+    --darkemerald: #234B4D;
+    --mediumemerald: #168283;
+    --clearemerald: #168183;
+    --writting: #DBE3E3;
+    --lightblue: #4DC6EB;
+}
+
+/* css du burger button et menu : nav bar générale du site */
+#hamburger, #hamburger-logo{
+    display: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background: black;
+    overflow: hidden;
+    margin: -10px -10px 0 -10px;
+
+    /* Pour que les liens soient "rangés" par défaut */
+
+}
+
+nav a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 20px 20px 20px 20px;
+    text-align: end;
+}
+    
+    *{
+        /* Pour que les tailles soient correctes */
+        box-sizing: border-box;
+    }
+    
+    body {
+        /* Pour coller le menu au bord, sans espace */
+        margin: 0;
+    }
+    
+    .menu {
+        /* Pour que le menu reste en place quand on scroll */
+        position: fixed;
+        /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+        width: 0px;
+    }
+    
+    #hamburger {
+        /* Pour que la checkbox ne s'affiche pas */
+        display: none;
+    }
+    
+    #hamburger-logo {
+        /* Pour que le curseur soit un pointeur */
+        cursor: pointer;
+        background: black;
+        width: 150px;
+        display: block;
+        color: white;
+        /* Pour que le menu hamburger s'affiche toujours */
+        text-align: right;
+        /* Pour que le menu hamburger soit "rangé" par défaut */
+        transform: translateX(-120px);
+        padding: 10px;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        background: black;
+        overflow: hidden;
+        width: 160px;
+        /* Pour que les liens soient "rangés" par défaut */
+        transform: translateX(-200px);
+    }
+    
+    #hamburger-logo,
+    nav {
+        /* Pour qu'il y ait une animation */
+        transition: 1.2s;
+    }
+    
+    /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+    #hamburger:checked ~ #hamburger-logo,
+    #hamburger:checked ~ nav {
+        /* Changement de la position pour afficher les menus */
+        transform: translate(0);
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        text-align: end;
+    }
+    
+
+/* -----------------fin nav bar et burger menu-------------- */
+.grad1 {
+    background-image: linear-gradient(to bottom right, #234B4D, #168283, #168183,#DBE3E3)
+    
+}
+.bigContainer{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.containerh1h2 {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+    color:var(--writting);
+    background-color:var(--primary);
+    margin: 20px;
+    padding: 1rem;
+
+    h1{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 30px;
+    }
+
+    img{
+        width: 200px;
+        height: 145px;
+    }
+
+    h2{
+        font-family:Gill Sans 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 15px;
+        padding: 10px;
+    }
+}
+
+.description {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: space-around;
+
+    background-color:var(--clearemerald);
+    padding: 10px;
+    margin: 20px;
+}
+
+#grad3 {
+    background-image: linear-gradient(to bottom left, #234B4D, #168283, #168183,#DBE3E3)
+}
+
+/* MOSAIC layout */
+
+.mosaic{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    width: 95%;
+    /* justify-content: center; */
+}
+ 
+.tiles {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 110%;
+
+    img {
+        margin: 0 0 3% 0;
+        
+    }
+
+    .category {
+        
+    display: flex;
+    flex-flow: column nowrap;
+    text-align: center;
+    color:var(--writting);
+    }
+}
+
+.chapitre{
+    text-align: center;
+}
+
+.sousChapitre{
+    text-align: left; 
+}
+.containerh3 {
+    
+    h3{
+        text-align: center;
+    }
+
+    h4{
+        text-align: left;
+    }
+
+    text-justify: distribute;
+        /* align-items: center; */
+    justify-content: space-around;
+
+    background-color:var(--secondary);
+    color:var(--primary);
+    margin: 20px;
+    padding: 10px;
+
+    img {
+        width: 100%;
+        height: 85%;
+        padding: 10px; 
+    }
+}
+
+.subimage{
+    text-align: start;
+    font-size: small;
+}
+
+.videoContainer{
+
+    display: flex;
+    flex-flow: column nowrap;
+
+
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ceci correspond à un ratio 16:9 (hauteur/largeur = 9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+        
+}
+
+.videoContainer iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+
+.pageFormat {
+  padding: 10px; 
+  color:var(--writting); 
+}
+
+
+/* ------- Footer liens site BBC etc, matching Louis'------ */
+
+footer{
+    background-color: var(--clearemerald);
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 10px;
+
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    
+}
+
+
+@media screen and (max-width:800px) {
+
+    .icon{
+        width: 50px;
+        height: 50px;
+        border-radius: 35%;
+        margin:20px 0 20px 0;
+    }     
+    
+}
+
+@media screen and (min-width:801px) {
+
+    .icon{
+        width: 100px;
+        height: 100px;
+        border-radius: 35%;
+        margin:20px 0 20px 0;
+    }     
+    
+}
+

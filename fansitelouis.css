@@ -1,0 +1,231 @@
+/* -------------------------------------------- */
+/* ------------- NAV BAR ---------------------- */
+/* -------------------------------------------- */
+    
+    *{
+        /* Pour que les tailles soient correctes */
+        box-sizing: border-box;
+
+    }
+    
+    body {
+        /* Pour coller le menu au bord, sans espace */
+        margin: 0;
+    }
+    
+    .menu {
+        /* Pour que le menu reste en place quand on scroll */
+        position: fixed;
+        /* Pour que le menu ne soit pas sur le texte et que ce dernier puisse être sélectionné */
+        width: 0px;
+    }
+    
+    #hamburger {
+        /* Pour que la checkbox ne s'affiche pas */
+        display: none;
+    }
+    
+    #hamburger-logo {
+        /* Pour que le curseur soit un pointeur */
+        cursor: pointer;
+        background: black;
+        width: 150px;
+        display: block;
+        color: white;
+        /* Pour que le menu hamburger s'affiche toujours */
+        text-align: right;
+        /* Pour que le menu hamburger soit "rangé" par défaut */
+        transform: translateX(-115px);
+        padding: 10px;
+    }
+    
+    nav {
+        display: flex;
+        flex-direction: column;
+        background: black;
+        overflow: hidden;
+        width: 150px;
+        /* Pour que les liens soient "rangés" par défaut */
+        transform: translateX(-200px);
+    }
+    
+    #hamburger-logo,
+    nav {
+        /* Pour qu'il y ait une animation */
+        transition: 1.2s;
+    }
+    
+    /* Lorsque #hamburger est coché, le #hamburger-logo et le nav qui sont dans le même parent changent de propriété */
+    #hamburger:checked ~ #hamburger-logo,
+    #hamburger:checked ~ nav {
+        /* Changement de la position pour afficher les menus */
+        transform: translate(0);
+    }
+    
+    nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        text-align: end;
+    }
+    
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+
+/* -------------------------------------------- */
+/* -------------MAIN CONTENT------------------- */
+/* -------------------------------------------- */
+
+
+/* Selection caractéristiques principales de la page */
+main {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    padding:0 5% 0 5%;
+    background-color: rgba(179, 189, 213, 0.467);
+    font-family:cursive;
+    background-image: url("images/background_site.jpg");
+    background-size:contain
+}
+/* Elements de mise en page du titre et de l'image */
+.ContainerH1 {
+    text-align: center;
+    background-color:none;
+    margin: 20px;     
+    opacity: 0.9;
+    padding: 0 20% 0 20%;
+   
+
+    H1 {
+        font-size: 68px;
+        color: rgb(39, 5, 151);
+    }
+    section {
+        font-size:20px;
+        margin-top: 20px;
+        padding:10% 10% 10% 10%;
+        background-color: white;
+        opacity: 0.8;
+        
+    }
+}
+
+/* Eléments de mise en page pour les sous-titres et leur section */
+
+.ContainerH2 {
+    margin: 20px;
+    text-align: center;
+
+    background-color: rgba(226, 207, 207, 0.778);
+   h2 {
+        color: rgb(81, 52, 230);
+    }
+    
+}
+.lecteurspotify{
+    opacity: 0.85;
+}
+
+/* Règles pour la disposition des images - mosaïque */
+.mosaiqueImages{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+}
+
+.mosaiqueImagesLine{
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    img{
+         width: 200px;
+         height: 200px;  
+        margin: 5px;
+    }
+}
+/* Paramétrage éléments textuels et photo pour la section actualités */
+.Containeractualités{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content:space-between;
+    background-color:rgb(255, 255, 255, 0.6) ;
+
+    img{
+       
+        width: 80%;
+        height: 80%;
+        margin-left: 10%;
+    }
+}
+/* Changement de la couleur par l'ID */
+#events{
+    color: rgb(81, 52, 230);
+}
+#pic{
+    color: rgb(81, 52, 230);
+}
+/* Elements de mise en page pour l'incrustation vidéo */
+.videoContainer{
+
+    display: flex;
+    flex-flow: column nowrap;
+
+
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* Ceci correspond à un ratio 16:9 (hauteur/largeur = 9/16 = 0.5625) */
+    height: 0;
+    overflow: hidden;
+        
+    
+}
+.videoContainer iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    }
+/* Elements de taille logos */
+.logo {
+    width: 50px;
+    height: 50px;
+        }
+
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+/* -------------------------------------------- */
+
+/* -------------------------------------------- */
+/* -------------------FOOTER------------------- */
+/* -------------------------------------------- */
+
+footer{
+        background-color: rgba(166, 180, 216, 0.382);
+    
+    }
+
+.ContainerFooter{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: center;
+
+
+    .logo{
+       margin: 20px;
+        background-color: white;
+        justify-content: center;
+    }
+ 
+}     
+.fanlink{
+    text-align: center;
+   
+}
